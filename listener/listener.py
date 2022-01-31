@@ -5,7 +5,7 @@ LOCAL_MQTT_HOST="172.16.24.2"
 LOCAL_MQTT_PORT=32258
 LOCAL_MQTT_TOPIC="image_topic"
 REMOTE_MQTT_HOST="54.158.175.80"
-REMOTE_MQTT_PORT=32556
+REMOTE_MQTT_PORT=1883
 REMOTE_MQTT_TOPIC="image_topic_remote"
 
 def on_connect_local(client, userdata, flags, rc):
