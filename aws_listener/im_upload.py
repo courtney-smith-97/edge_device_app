@@ -5,7 +5,7 @@ import logging
 from botocore.exceptions import ClientError
 
 LOCAL_MQTT_HOST="172.31.94.10"
-LOCAL_MQTT_PORT=31857
+LOCAL_MQTT_PORT=32556
 LOCAL_MQTT_TOPIC="image_topic_remote"
 
 def upload_file(file_name, bucket, object_name=None):
