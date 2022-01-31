@@ -36,4 +36,5 @@ remote_mqttclient.connect(REMOTE_MQTT_HOST, REMOTE_MQTT_PORT, 60)
 remote_mqttclient.onmessage = on_message
 
 # go into a loop
+remote_mqttclient.loop_start()
 local_mqttclient.loop_forever()
