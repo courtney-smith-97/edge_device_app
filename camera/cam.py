@@ -4,7 +4,7 @@ import cv2 as cv
 import paho.mqtt.client as mqtt
 # the index depends on your camera setup and which one is your USB camera.
 LOCAL_MQTT_HOST="172.16.24.2"
-LOCAL_MQTT_PORT=32533
+LOCAL_MQTT_PORT=32153
 LOCAL_MQTT_TOPIC="image_topic"
 
 def on_connect_local(client, userdata, flags, rc):
