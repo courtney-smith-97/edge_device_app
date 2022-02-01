@@ -3,8 +3,8 @@ import numpy as np
 import cv2 as cv
 import paho.mqtt.client as mqtt
 # the index depends on your camera setup and which one is your USB camera.
-LOCAL_MQTT_HOST="172.16.24.2"
-LOCAL_MQTT_PORT=32258
+LOCAL_MQTT_HOST="mosquitto-service"
+LOCAL_MQTT_PORT=1883
 LOCAL_MQTT_TOPIC="image_topic"
 
 def on_connect_local(client, userdata, flags, rc):
@@ -37,3 +37,4 @@ while(True):
 # When everything done, release the capture
 cap.release()
 cv.destroyAllWindows()
+
