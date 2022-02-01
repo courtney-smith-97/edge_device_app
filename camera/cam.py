@@ -13,7 +13,7 @@ def on_connect_local(client, userdata, flags, rc):
 local_mqttclient = mqtt.Client()
 local_mqttclient.on_connect = on_connect_local
 local_mqttclient.connect(LOCAL_MQTT_HOST, LOCAL_MQTT_PORT, 60)
-face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml')
+face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
 cap = cv.VideoCapture(0)
 while(True):
     # Capture frame-by-frame
