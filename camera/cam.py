@@ -31,7 +31,7 @@ while(True):
         print('msg received')
     
     # Display the resulting frame
-    cv.imshow('frame',gray)
+    #cv.imshow('frame',gray)
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
 # When everything done, release the capture
