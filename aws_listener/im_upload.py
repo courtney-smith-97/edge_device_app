@@ -8,7 +8,7 @@ from botocore.exceptions import ClientError
 from datetime import datetime
 LOCAL_MQTT_HOST="54.158.175.80"
 LOCAL_MQTT_PORT=1883
-LOCAL_MQTT_TOPIC="image_topic"
+LOCAL_MQTT_TOPIC="usbcam/images"
 
 def upload_file(file_name, bucket, object_name=None):
     """Upload a file to an S3 bucket
