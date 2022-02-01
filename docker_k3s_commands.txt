@@ -1,0 +1,20 @@
+## commands run to create deployments on VM
+
+docker build -t smithcourtney/mosquitto:v1 .
+kubectl apply -f mosquitto.yaml
+kubectl apply -f mosquittoService.yaml
+
+docker build -t smithcourtney/listener:v1 .
+kubectl apply -f listener.yaml
+
+## create deployments on AWS
+docker build -t smithcourtney/mosquitto:v1 .
+kubectl apply -f mosquitto.yaml
+kubectl apply -f mosquittoService.yaml
+
+docker build -t smithcourtney/im_upload:v1 .
+kubectl apply -f im_upload.yaml
+
+## deployment on VM
+docker build -t smithcourtney/camera:v1 .
+kubectl apply -f face-detector.yaml
