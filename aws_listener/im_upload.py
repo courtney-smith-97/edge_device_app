@@ -1,12 +1,14 @@
 ###### im_upload.py
 import paho.mqtt.client as mqtt
+import sys
+import os
 import boto3
 import logging
 from botocore.exceptions import ClientError
-
-LOCAL_MQTT_HOST="172.31.94.10"
-LOCAL_MQTT_PORT=32556
-LOCAL_MQTT_TOPIC="image_topic_remote"
+from datetime import datetime
+LOCAL_MQTT_HOST="54.158.175.80"
+LOCAL_MQTT_PORT=1883
+LOCAL_MQTT_TOPIC="image_topic"
 
 def upload_file(file_name, bucket, object_name=None):
     """Upload a file to an S3 bucket
@@ -38,7 +40,13 @@ def on_message(client,userdata, msg):
     print("message received")
     # if we wanted to re-publish this message, something like this should work
     msg = msg.payload
-    print(upload_file(msg, "hw3-image-bucket", "upload_file"))
+    filename = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")+".png" 
+    f = open(filename,'wb')
+    f.write(msg)
+    f.close()
+    upload_file(filename, "hw3-image-bucket", filename)
+    os.remove(filename)
+    print('success')
   except:
     print("Unexpected error:", sys.exc_info()[0])
 
