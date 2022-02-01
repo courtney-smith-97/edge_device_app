@@ -1,8 +1,8 @@
 import paho.mqtt.client as mqtt
 import sys
 
-LOCAL_MQTT_HOST="172.16.24.2"
-LOCAL_MQTT_PORT=32258
+LOCAL_MQTT_HOST="localhost"
+LOCAL_MQTT_PORT=1883
 LOCAL_MQTT_TOPIC="image_topic"
 REMOTE_MQTT_HOST="54.158.175.80"
 REMOTE_MQTT_PORT=1883
@@ -37,4 +37,3 @@ local_mqttclient.on_message = on_message
 
 # go into a loop
 remote_mqttclient.loop_start()
-local_mqttclient.loop_forever()
