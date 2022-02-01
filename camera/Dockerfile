@@ -7,5 +7,5 @@ RUN pip3 install Cython
 RUN pip3 install numpy
 RUN pip3 install paho-mqtt
 COPY cam.py cam.py
-
+CMD ["xhost +"]
 CMD ["python3","cam.py"]
