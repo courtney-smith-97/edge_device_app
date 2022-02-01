@@ -14,15 +14,14 @@ spec:
     spec:
       containers:
       - name: face-detector
-        image: smithcourtney/camera:v1
-      apiVersion: apps/v1
-      containers:
-      - name: foo
         volumeMounts:
         - mountPath: /dev/video0
           name: dev-video0
         securityContext:
           privileged: true
+        image: smithcourtney/camera:v1
+        ports:
+        - containerPort: 1883
       volumes:
       - name: dev-video0
         hostPath:
