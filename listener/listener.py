@@ -3,10 +3,10 @@ import sys
 
 LOCAL_MQTT_HOST="mosquitto-service"
 LOCAL_MQTT_PORT=1883
-LOCAL_MQTT_TOPIC="image_topic"
+LOCAL_MQTT_TOPIC="usbcam/images"
 REMOTE_MQTT_HOST="54.158.175.80"
 REMOTE_MQTT_PORT=1883
-REMOTE_MQTT_TOPIC="image_topic"
+REMOTE_MQTT_TOPIC="usbcam/images"
 
 def on_connect_local(client, userdata, flags, rc):
         print("connected to local broker with rc: " + str(rc))
