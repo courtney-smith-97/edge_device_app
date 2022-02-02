@@ -10,3 +10,7 @@
 ### HW Questions
 - I used QoS 0 because which specific images were transmitted and ultimately stored in the S3 wasn't important, so I didn't need a guarantee that each image would be transmitted at least once. QoS 0 is also fastest which would work well for this type of use case.
 - I named my topic after the origin and type of the message (usb camera, images): `usbcam/images`
+
+
+### S3 Link
+https://hw3-image-bucket.s3.amazonaws.com/01-02-2022_20-50-29.png
